@@ -19,4 +19,6 @@ if(!(Test-Path("SDL2.dll")))
 # cl /MD $source_name /Fe$executable_name $compiler_flags /I$include_path /link /LIBPATH:$lib_path $libraries $linker_flags /SUBSYSTEM:console
 # cl $source_name /Fe$executable_name $compiler_flag
 # clang -g  -I..\include\  -L..\lib\ -l libcurl-d.lib  $source_name -o $executable_name $compiler_flags
-cl -Zi  $source_name /Fe$executable_name $compiler_flags /I$include_path /link /LIBPATH:$lib_path $libraries /SUBSYSTEM:CONSOLE
+cl  $source_name /Fe$executable_name $compiler_flags /I$include_path /link /LIBPATH:$lib_path $libraries /SUBSYSTEM:CONSOLE
+Pop-Location
+echo "please find the required executable in bin folder"
