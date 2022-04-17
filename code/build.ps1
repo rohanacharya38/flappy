@@ -2,7 +2,7 @@ if(!(Test-Path("..\bin")))
 {
         New-Item -Itemtype Directory "..\bin"
 }
-$source_name = "..\code\main.c"
+$source_name = "..\code\main.cpp","..\code\bird.cpp","..\code\text_input.cpp","..\code\pipes.cpp"
 $executable_name = "main.exe"
 $lib_path ="..\lib\"
 $include_path ="..\include"
@@ -19,4 +19,4 @@ if(!(Test-Path("SDL2.dll")))
 # cl /MD $source_name /Fe$executable_name $compiler_flags /I$include_path /link /LIBPATH:$lib_path $libraries $linker_flags /SUBSYSTEM:console
 # cl $source_name /Fe$executable_name $compiler_flag
 # clang -g  -I..\include\  -L..\lib\ -l libcurl-d.lib  $source_name -o $executable_name $compiler_flags
-cl  $source_name /Fe$executable_name $compiler_flags /I$include_path /link /LIBPATH:$lib_path $libraries /SUBSYSTEM:CONSOLE
+cl -Zi  $source_name /Fe$executable_name $compiler_flags /I$include_path /link /LIBPATH:$lib_path $libraries /SUBSYSTEM:CONSOLE
