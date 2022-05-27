@@ -11,6 +11,7 @@ private:
 public:
     bool is_jumping;
     bool is_dead;
+    int score;
     SDL_Rect bird_rect;
     bird(SDL_Renderer *renderer);
     int die();

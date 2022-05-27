@@ -47,10 +47,11 @@ SDL_Rect get_char_rect_cood(const char ch)
     tmp.y = ((ch - 32) / 18) * tmp.h;
     return tmp;
 }
-void render_string(SDL_Renderer *renderer, const char *str, const int length, SDL_Texture *img_texture, int init_x_pos, int init_y_pos)
+void render_string(SDL_Renderer *renderer, const char *str, const int length, SDL_Texture *img_texture, int init_x_pos=0, int init_y_pos=0,int height=14,int width=18)
 {
     SDL_Rect char_rect;
-    SDL_Rect d_rect = {14, 18, init_x_pos, init_y_pos};
+    
+    SDL_Rect d_rect = { init_x_pos, init_y_pos,width,height};
     for (int i = 0; i < length; i++)
     {
         if (str[i] == '\n')

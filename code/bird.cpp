@@ -23,6 +23,7 @@ int bird::bird_respawn()
 {
     bird_rect.x = XPOSITION;
     bird_rect.y = (SCREEN_HEIGHT) / 2;
+    score=0;
     is_jumping = false;
     return 0;
 }

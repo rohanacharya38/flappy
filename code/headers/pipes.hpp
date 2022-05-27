@@ -1,5 +1,5 @@
 #pragma once
-#define PIPE_COUNT 2
+#define PIPE_COUNT 4
 #include <SDL.h>
 class pipes
 {
