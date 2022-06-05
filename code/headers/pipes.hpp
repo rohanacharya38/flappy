@@ -1,7 +1,7 @@
 #pragma once
 #define PIPE_COUNT 4
 #include <SDL.h>
-class pipes
+struct pipes
 {
 private:
     SDL_Rect pipe_texture_rect_up;

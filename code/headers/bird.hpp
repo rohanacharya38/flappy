@@ -1,6 +1,6 @@
 #pragma once
 #include <SDL.h>
-class bird
+struct bird
 {
 private:
     int gravity, jmp_duration;

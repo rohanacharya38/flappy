@@ -2,6 +2,8 @@
 #include "headers/text_input.hpp"
 #include "headers/defines.hpp"
 #include "headers/pcg_basic.h"
+int PIPE_SPEED = 3;
+
 pipes::pipes(SDL_Renderer *renderer)
 {
     mrenderer = renderer;
@@ -23,8 +25,8 @@ int pipes::update()
 {
     for (int i = 0; i < PIPE_COUNT; i++)
     {
-        pipe_rect_up[i].x-=PIPE_SPEED;
-        pipe_rect_down[i].x-=PIPE_SPEED;
+        pipe_rect_up[i].x -= PIPE_SPEED;
+        pipe_rect_down[i].x -= PIPE_SPEED;
         pipe_rect_up[i].x < 0 ? create(i) : 0;
         SDL_RenderCopy(mrenderer, pipe_texture, &pipe_texture_rect_up, pipe_rect_up + i);
         SDL_RenderCopy(mrenderer, pipe_texture, &pipe_texture_rect_down, pipe_rect_down + i);

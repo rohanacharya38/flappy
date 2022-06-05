@@ -4,4 +4,3 @@
 #define XPOSITION 200
 #define PADDING 200
 #define PIPE_WIDTH 50
-int PIPE_SPEED=1;

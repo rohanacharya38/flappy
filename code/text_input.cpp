@@ -8,7 +8,6 @@ SDL_Texture *load_img(SDL_Renderer *renderer, char *image_path, SDL_Rect *img_pr
     uint8_t *data = stbi_load(image_path, &width, &height, &orig_format, req_format);
     if (img_prop != NULL)
     {
-        printf("%d+%d",height,width);
         img_prop->h = height;
         img_prop->w = width;
     }

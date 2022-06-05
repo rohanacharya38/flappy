@@ -75,6 +75,19 @@ int main(int argc, char **argv)
                     break;
                 }
             }
+            if (event.type == SDL_MOUSEBUTTONDOWN)
+            {
+                if (bird1.is_dead)
+                {
+                    bird1.is_dead = false;
+                    bird1.bird_respawn();
+                    pipe1.respawn();
+                }
+                else
+                {
+                    bird1.is_jumping = true;
+                }
+            }
         }
         if (!bird1.is_dead)
         {
