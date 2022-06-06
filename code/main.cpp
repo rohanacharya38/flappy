@@ -6,6 +6,7 @@
 #include "headers/pipes.hpp"
 #include "headers/text_input.hpp"
 #include <time.h>
+#include <random>
 #include <SDL.h>
 
 int main(int argc, char **argv)

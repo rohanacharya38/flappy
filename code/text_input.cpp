@@ -1,7 +1,7 @@
 #include "headers/text_input.hpp"
 #include "headers/stb_image.h"
 #include "headers/defines.hpp"
-SDL_Texture *load_img(SDL_Renderer *renderer, char *image_path, SDL_Rect *img_prop)
+SDL_Texture *load_img(SDL_Renderer *renderer,const char *image_path, SDL_Rect *img_prop)
 {
     int req_format = STBI_rgb_alpha;
     int width, height, orig_format;
