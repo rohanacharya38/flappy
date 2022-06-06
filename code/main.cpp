@@ -5,13 +5,12 @@
 #include "headers/bird.hpp"
 #include "headers/pipes.hpp"
 #include "headers/text_input.hpp"
-#include "headers/pcg_basic.h"
 #include <time.h>
 #include <SDL.h>
 
 int main(int argc, char **argv)
 {
-    pcg32_srandom(time(NULL) ^ (intptr_t)&printf, NULL);
+    srand(time(NULL) ^ (intptr_t)&printf);
     SDL_Init(SDL_INIT_EVERYTHING);
     SDL_Window *window = SDL_CreateWindow("Window", SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, SCREEN_WIDTH, SCREEN_HEIGHT, 0);
     SDL_Renderer *renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);

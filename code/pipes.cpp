@@ -1,7 +1,6 @@
 #include "headers/pipes.hpp"
 #include "headers/text_input.hpp"
 #include "headers/defines.hpp"
-#include "headers/pcg_basic.h"
 int PIPE_SPEED = 3;
 
 pipes::pipes(SDL_Renderer *renderer)
@@ -16,7 +15,7 @@ pipes::pipes(SDL_Renderer *renderer)
 int pipes::create(int i)
 {
 
-    int pipe_height = (pcg32_random() % (SCREEN_HEIGHT - 2 * PADDING) + PADDING);
+    int pipe_height = (rand() % (SCREEN_HEIGHT - 2 * PADDING) + PADDING);
     pipe_rect_up[i] = {SCREEN_WIDTH, pipe_height - SCREEN_HEIGHT, PIPE_WIDTH, SCREEN_HEIGHT};
     pipe_rect_down[i] = {pipe_rect_up[i].x, pipe_height + 200, PIPE_WIDTH, SCREEN_HEIGHT};
     return 0;
