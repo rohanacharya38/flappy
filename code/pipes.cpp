@@ -1,6 +1,7 @@
 #include "headers/pipes.hpp"
 #include "headers/text_input.hpp"
 #include "headers/defines.hpp"
+#include <random>
 int PIPE_SPEED = 3;
 
 pipes::pipes(SDL_Renderer *renderer)
